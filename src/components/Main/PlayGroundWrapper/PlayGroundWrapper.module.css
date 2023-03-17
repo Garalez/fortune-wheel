@@ -1,0 +1,38 @@
+:root {
+  --animation-time: 0deg;
+}
+
+.playGroundWrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 500px;
+}
+
+.wheelWrapper {
+  width: 500px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wheel {
+  background: linear-gradient(90deg, #ff0000 0%, #ff7f00 17%, #ffff00 33%, #00ff00 50%, #0000ff 67%, #4b0082 83%, #ee82ee 100%);
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+}
+
+.rotate {
+  animation: rotate 7s ease-in-out;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(var(--animation-time));
+  }
+}
